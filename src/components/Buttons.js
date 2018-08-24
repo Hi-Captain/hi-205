@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import './Buttons.scss';
 
-const Buttons = () => {
+const Buttons = ({isShuffle, goShuffle, goVS}) => {
   return (
-    <div>
-      <button>2</button>
-      <button>0</button>
-      <button>5</button>
+    <div className="btnWrap">
+    {isShuffle ?
+      <Fragment>
+          <button className="btnWrap__btn" onClick={goVS}>2</button>
+          <button className="btnWrap__btn" onClick={goVS}>0</button>
+          <button className="btnWrap__btn" onClick={goVS}>5</button>
+      </Fragment>
+          : <button className="btnWrap__btn btnWrap__start" onClick={goShuffle}>Start</button>
+     }
     </div>
   );
 }
