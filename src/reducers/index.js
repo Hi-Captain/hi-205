@@ -14,11 +14,13 @@ function startGame(state = initialState, action) {
         ...state,
         isShuffle: true,
         com: action.comPick,
+        result: ''
       };
     case types.VS:
       return {
         ...state,
-        isShuffle: false
+        isShuffle: false,
+        result: action.result
       }
     default :
       return state;

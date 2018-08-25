@@ -5,6 +5,7 @@ export const shuffle = (comPick) => ({
   comPick
 })
 
-export const vs = () => ({
-  type: types.VS
+export const vs = (result) => ({
+  type: types.VS,
+  result
 })

@@ -3,9 +3,19 @@ import * as actions from '../actions';
 import { connect } from 'react-redux';
 
 export function getComPick(){
-  const pickCase = [2, 0, 5]
+  const pickCase = ['가위', '바위', '보']
   const random = Math.floor(Math.random() * pickCase.length);
   return pickCase[random]
+}
+export function getResult(mine, com){
+  const winTable = {'가위': '보', '바위': '가위', '보': '바위'}
+  if(winTable[mine] === com){
+    return 'Win'
+  } else if (mine === com){
+    return 'Draw'
+  } else {
+    return 'Lose'
+  }
 }
 
 const mapStateToProps = (state) => ({
@@ -23,11 +33,12 @@ const mapDispatchToProps = (dispatch) => ({
       while(comPick === temp){comPick = getComPick()}
       dispatch(actions.shuffle(comPick));
       temp = comPick
-    }, 50)
+    }, 100)
   },
-  goVS: () => {
+  goVS: (minePick, comPick) => {
     clearInterval(this.Interval)
-    dispatch(actions.vs());
+    const result = getResult(minePick, comPick)
+    dispatch(actions.vs(result));
   }
 })
 
