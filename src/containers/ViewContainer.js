@@ -7,6 +7,7 @@ export function getComPick(){
   const random = Math.floor(Math.random() * pickCase.length);
   return pickCase[random]
 }
+
 export function getResult(mine, com){
   const winTable = {'가위': '보', '바위': '가위', '보': '바위'}
   if(winTable[mine] === com){

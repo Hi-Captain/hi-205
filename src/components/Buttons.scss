@@ -1,16 +1,66 @@
 .btnWrap{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height:  20%;
 
   &__btn{
-    width: 25%;
-    height: 100%;
+    width: 30%;
+    height: 90%;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 1rem;
+    outline: none;
+    transition: transform .3s, box-shadow .4s, background-color .3s;
+
+    &:hover{
+      cursor: pointer;
+      background: #000;
+      color: #fff;
+      transform: translateY(-.3rem);
+      box-shadow: .1rem .2rem .6rem rgba(54, 54, 54, 0.7);
+
+      div{
+        background-color: #fff;
+        color:#000;
+      }
+    }
+    &:active{
+      transform: translateY(0rem);
+    }
+    
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: .5rem;
+      width: 100%;
+      height: 80%;
+      color: white;
+    }
+
+    .rock{
+      background-color: #000;
+      -webkit-mask: url(../img/바위.svg) no-repeat center;
+      mask: url(../img/바위.svg) no-repeat center;
+    }
+
+    .paper{
+      background-color: #000;
+      -webkit-mask: url(../img/보.svg) no-repeat center;
+      mask: url(../img/보.svg) no-repeat center;
+    }
+
+    .scissors{
+      background-color: #000;
+      -webkit-mask: url(../img/가위.svg) no-repeat center;
+      mask: url(../img/가위.svg) no-repeat center;
+    }
   }
 
   &__start{
     width: 80%;
     height: 80%;
     margin: auto;
+    font-size: 5rem;
   }
 }

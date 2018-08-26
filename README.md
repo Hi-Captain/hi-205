@@ -48,3 +48,12 @@ Make Rock Paper Scissors Game with React + Redux
   - idea :
     - 잘 들어간거 같다.
     - 스타일을 꾸며보자.
+
+> 2018.08.27
+  - title : Add Style
+  - content :
+    - SASS활용 style markup
+  - idea :
+    - black & white
+    - 함부로 디자인은 하면 안되겠다.
+    - 이대로는 조금 어설픈것 같은데 결과를 기록해볼까..?

@@ -1,28 +1,46 @@
+@import '../styles/utils';
+
 .dpWrap{
   width: 100%;
   height: 80%;
   position: relative;
+  text-align: center;
 
   &__comPick{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center-center;
 
-    text-align: center;
-    font-size: 14rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+    img{
+      width: 90%;
+      height: 85%;
+      transform-origin: center 45.7%;
+      animation: img-spin infinite 180s linear;
+    }
+    .speed{
+      animation: img-spin infinite 3s linear;
+    }
   }
 
   &__result{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center-center;
 
-    text-align: center;
-    font-size: 2rem;
-    padding: 5rem;
-    background: #000;
-    color: white;
+    width: 80%;
+    animation: slide-up .4s ease-in-out;
+
+    div{
+      width: 100%;
+      height: 12rem;
+      text-align: center;
+      font-size: 4rem;
+      line-height: 12rem;
+      color: black;
+      background: white;
+      border: 1px solid black;
+      opacity: .9;
+      animation: big-small 1s ease 1 .5s ;
+    }
   }
 }
