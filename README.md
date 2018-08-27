@@ -57,3 +57,16 @@ Make Rock Paper Scissors Game with React + Redux
     - black & white
     - 함부로 디자인은 하면 안되겠다.
     - 이대로는 조금 어설픈것 같은데 결과를 기록해볼까..?
+
+> 2018.08.27
+  - title : Add Record & Finish
+  - content : 
+    - Record.js, RecordContainer.js 생성
+    - 액션, 리듀서 수정
+    - 승률 기능 추가
+    - 연승 기능 추가
+  - idea :
+    - vs 할 때, record배열에 mine, com, result 객채형태로 기록
+    - 이것저것 넣다보니 넣고싶은건 다 넣었는데 코드가 너무 복잡하다.
+    - 일단은 여기까지 프로젝트 마무리.
+    

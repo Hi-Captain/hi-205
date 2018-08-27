@@ -5,7 +5,13 @@ export const shuffle = (comPick) => ({
   comPick
 })
 
-export const vs = (result) => ({
+export const vs = (result, mine, com) => ({
   type: types.VS,
-  result
+  result,
+  mine,
+  com
+})
+
+export const clearRec = () => ({
+  type: types.CLEARREC
 })

@@ -39,7 +39,7 @@ const mapDispatchToProps = (dispatch) => ({
   goVS: (minePick, comPick) => {
     clearInterval(this.Interval)
     const result = getResult(minePick, comPick)
-    dispatch(actions.vs(result));
+    dispatch(actions.vs(result, minePick, comPick));
   }
 })
 

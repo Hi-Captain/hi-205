@@ -1,23 +1,17 @@
+@import '../styles/utils';
+
 .btnWrap{
   display: flex;
   justify-content: space-around;
   height:  20%;
 
   &__btn{
+    @include btn-style;
     width: 30%;
     height: 90%;
-    background: #fff;
-    border: 1px solid #333;
-    border-radius: 1rem;
-    outline: none;
-    transition: transform .3s, box-shadow .4s, background-color .3s;
 
     &:hover{
-      cursor: pointer;
-      background: #000;
-      color: #fff;
-      transform: translateY(-.3rem);
-      box-shadow: .1rem .2rem .6rem rgba(54, 54, 54, 0.7);
+      @include btn-hover;
 
       div{
         background-color: #fff;
@@ -25,7 +19,7 @@
       }
     }
     &:active{
-      transform: translateY(0rem);
+      @include btn-active;
     }
     
     div{

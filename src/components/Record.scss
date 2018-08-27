@@ -1,0 +1,73 @@
+@import '../styles/utils';
+
+.recordWrap{
+  height: 100%;
+  padding: 1rem 2rem;
+  position: relative;
+
+  .recList{
+    
+    height: 80%;
+    padding: 1rem;
+    overflow: auto;
+
+    &__meta,
+    &__record{
+      @include flex-row;
+      text-align: center;
+
+      div{
+        width: 30%;
+      }
+      div:first-child{
+        width: 10%;
+      }
+    }
+
+    &__meta{
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    &__record{
+      font-size: 1.7rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .empty-txt{
+      @include center-center;
+      top: 45%;
+      font-size: 1.7rem;
+    }
+  }
+
+  .recRate{
+    height: 10%;
+
+    & > div{
+      @include flex-row;
+      
+      height: 100%;
+      padding: 1rem;
+      font-size: 1.6rem;
+      justify-content: space-around;
+    }
+  }
+
+  button{
+    @include btn-style;
+    width: 100%;
+    height: 10%;
+    border-radius: .5rem;
+    font-size: 2rem;
+
+    &:hover{
+      @include btn-hover;
+    }
+    &:active{
+      @include btn-active;
+    }
+  }
+}

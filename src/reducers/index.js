@@ -4,7 +4,8 @@ const initialState = {
   mine: '',
   com: '',
   result: '',
-  isShuffle: false
+  isShuffle: false,
+  record: []
 }
 
 function startGame(state = initialState, action) {
@@ -20,7 +21,13 @@ function startGame(state = initialState, action) {
       return {
         ...state,
         isShuffle: false,
-        result: action.result
+        result: action.result,
+        record: [...state.record, {mine: action.mine, com: action.com, result: action.result}]
+      }
+    case types.CLEARREC:
+      return {
+        ...state,
+        record: []
       }
     default :
       return state;
